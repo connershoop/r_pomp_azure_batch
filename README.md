@@ -20,7 +20,10 @@ Both examples share the `./app` directory for storing scripts and assets. The ne
       1. This will be used by the batch compute pool to access azure resources.
       2. This identity should be assigned `STORAGE_BLOB_DATA_OWNER` on the azure storage account
       3. This identity should be assigned `ACR_PULL` on the azure container registry
-3. Access to the batch account via your Entra Id account.
+3. Access to the resources via your Entra Id account.
+   1. `AZURE_BATCH_ACCOUNT_CONTRIBUTOR` on the azure batch account
+   1. `ACR_PUSH` on the azure container registry
+   1. `STORAGE_BLOB_DATA_OWNER` on the storage account
 4. Using these newly created resources, replace these values in this repository:`<subscriptionId>`, `<resourceGroupName>`,`<batchAccountName>`,`<region>`,`<storageAccountName>`,`<azureContainerRegistryName>`,`<region>`
 
 
